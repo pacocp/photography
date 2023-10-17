@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Photography Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+</head>
+<body>
+    <header>
+        <h1>Francisco Carrillo Pérez - Photos</h1>
+    </header>
+    <main>
+        <div class="gallery">
+            <div class="photo">
+                <img src="images/image1.JPG" alt="Shark point, near Santa Cruz. California. May 2022" class="thumbnail">
+            </div>
+            <div class="photo">
+                <img src="images/DSCF3309.jpg" alt="Beautiful Vernal Falls with a rainbow. Yosemite National Park, California. August 2022" class="thumbnail">
+            </div>
+            <div class="photo">
+                <img src="images/DSCF3373.JPG" alt="Sunrise over the lake. Lake Tahoe, California. August 2022" class="thumbnail">
+            </div>
+            <div class="photo">
+                <img src="images/DSCF3409.jpg" alt="A sea of lakes from the top of Desolation Wilderness. Lake Taho, California. August 2022" class="thumbnail">
+            </div>
+            <div class="photo">
+                <img src="images/DSCF4027.jpg" alt="The greenest field I have ever witnes. Fairy Glen, Isle of Skye, Scotland. August 2023" class="thumbnail">
+            </div>
+            <!-- Add more photo elements as needed -->
+        </div>
+    </main>
+
+    <div id="lightbox">
+        <span class="close-button" onclick="closeLightbox()">&times;</span>
+        <img id="lightbox-image">
+        <button class="prev-button" onclick="changePhoto(-1)">&#8249;</button>
+        <button class="next-button" onclick="changePhoto(1)">&#8250;</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
