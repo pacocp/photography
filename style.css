@@ -12,6 +12,11 @@ header {
     padding: 20px;
     font-family: 'Montserrat', sans-serif;
 }
+footer {
+    background-color: #454545;
+    color: #fff;
+    padding: 10px;
+}
 
 h1 {
     font-size: 36px;
