@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Photography Portfolio</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -12,50 +15,19 @@
     </header>
     <main>
         <div class="gallery">
-            <div class="photo">
-                <img src="images/image1.JPG" alt="Shark point, near Santa Cruz. California. May 2022" class="thumbnail">
-            </div>
-            <div class="photo">
-                <img src="images/DSCF3309.jpg" alt="Beautiful Vernal Falls with a rainbow. Yosemite National Park, California. August 2022" class="thumbnail">
-            </div>
-            <div class="photo">
-                <img src="images/DSCF3373.JPG" alt="Sunrise over the lake. Lake Tahoe, California. August 2022" class="thumbnail">
-            </div>
-            <div class="photo">
-                <img src="images/DSCF3409.jpg" alt="A sea of lakes from the top of Desolation Wilderness. Lake Tahoe, California. August 2022" class="thumbnail">
-            </div>
-            <div class="photo">
-                <img src="images/DSCF4027.jpg" alt="The greenest field I have ever witness. Fairy Glen, Isle of Skye, Scotland. August 2023" class="thumbnail">
-            </div>
-            <div class="photo">
-                <img src="images/DSCF4233.JPG" alt="Mountains over mountains in Parque Arenas. Cajón del Maipo, Chile. October 2023" class="thumbnail">
-            </div>
-            <div class="photo">
-                <img src="images/DSCF4187.jpg" alt="Where the mountains meet the water, Embalse el Yeso 2.600 m.a.s.l. Cajón del Maipo, Chile. October 2023" class="thumbnail">
-            </div>
-            <div class="photo">
-                <img src="images/IMG_2640.jpeg" alt="Views from the Veleta peak, 3.396 m.a.s.l. Sierra Nevada, Granada, Spain. February 2023" class="thumbnail">
-            </div>
-            <div class="photo">
-                <img src="images/DSCF4440.JPG" alt="Torres del Paine behind the clouds, Parque Nacional Torres del Paine, Chile. December 2023" class="thumbnail">
-            </div>
-            <div class="photo">
-                <img src="images/DSCF3898.jpg" alt="Fishing town, Portree, Scotland. August 2023" class="thumbnail">
-            </div>
-            <!-- Add more photo elements as needed -->
-        </div>
+            </div> 
     </main>
     <footer class="bg-dark text-light text-center py-2">
         <p>&copy; 2024 Francisco Carrillo Pérez</p>
     </footer>
+
     <div id="lightbox">
         <span class="close-button" onclick="closeLightbox()">&times;</span>
         <img id="lightbox-image">
+        <div id="lightbox-caption"></div> <div id="lightbox"></div>
         <button class="prev-button" onclick="changePhoto(-1)">&#8249;</button>
         <button class="next-button" onclick="changePhoto(1)">&#8250;</button>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
-
