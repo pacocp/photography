@@ -8,11 +8,18 @@ body {
 }
 
 header {
-    background-color: #333; /* Dark background */
-    color: white;
-    padding: 1rem 0;
+    background: linear-gradient(to right, #222, #333); /* Gradient background */
+    color: #f5f5f5; /* Light text color */
+    padding: 1.5rem 0;
     text-align: center;
 }
+
+h1 {
+    font-family: 'Playfair Display', serif; /* Elegant font */
+    font-weight: 600;
+    margin: 0;
+}
+
 
 main {
     flex: 1;  /* Allow main content to grow */
@@ -69,7 +76,16 @@ main {
 #lightbox-image[style*="transform: scale(2)"] + #lightbox-caption { /* Hide when zoomed in */
     opacity: 0;
 }
-
+/* Lightbox Styling */
+#lightbox-image:hover ~ .prev-button, /* Hide when hovering over image OR */
+#lightbox-image:hover ~ .next-button, 
+#lightbox-image:hover ~ .close-button,
+#lightbox-image[style*="transform: scale(2)"] ~ .prev-button, /* Hide when zoomed in */
+#lightbox-image[style*="transform: scale(2)"] ~ .next-button,
+#lightbox-image[style*="transform: scale(2)"] ~ .close-button { 
+    opacity: 0;
+    pointer-events: none; /* Disable clicks when hidden */
+}
 /* Lightbox Styling */
 #lightbox {
     display: none;
@@ -91,14 +107,23 @@ main {
 }
 /* Add styles for close-button, prev-button and next-button as needed */
 
-/* Footer Styling */
 footer {
-    background-color: #333;
-    color: white;
+    background: linear-gradient(to right, #222, #333);; /* Textured background */
+    color: #ddd; 
     padding: 1rem 0;
     text-align: center;
 }
 
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+    color: #ddd;
+    transition: color 0.2s ease;
+}
+
+.social-icons a:hover {
+    color: #f5f5f5;
+}
 .lightbox-content {
     position: relative; /* Make it a positioning context for the buttons */
 }
@@ -106,7 +131,7 @@ footer {
 .prev-button, .next-button {
     position: absolute;
     top: 50%; /* Vertically center */
-    right: 20px; /* Adjust distance from right as needed */
+    /*right: 20px;*/ /* Adjust distance from right as needed */
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.7);
     color: white;
@@ -115,7 +140,14 @@ footer {
     cursor: pointer;
     font-size: 18px;
 }
+.lightbox-content {
+    position: relative;
+}
 
 .prev-button {
-    right: 60px; /* Adjust for spacing between buttons */
+    left: 20px; /* Place on the left */
+}
+
+.next-button {
+    right: 20px; /* Place on the right */
 }

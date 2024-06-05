@@ -73,3 +73,17 @@ function changePhoto(step) {
     const caption = document.getElementById('lightbox-caption');
     caption.textContent = photos[currentImageIndex].alt; 
 }
+
+// Event listener for keyboard navigation
+document.addEventListener('keydown', (event) => {
+    if (lightbox.style.display === 'block') { // Only handle keys when lightbox is open
+        if (event.key === 'ArrowLeft') {
+            changePhoto(-1); // Go to previous photo
+        } else if (event.key === 'ArrowRight') {
+            changePhoto(1);  // Go to next photo
+        }
+        else if (event.key === 'Escape') {
+            closeLightbox()
+        }
+    }
+});
