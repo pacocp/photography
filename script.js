@@ -10,6 +10,7 @@ const photos = [
     { src: 'images/IMG_2640.jpeg', alt: 'Views from the Veleta peak, 3.396 m.a.s.l. Sierra Nevada, Granada, Spain. February 2023' },
     { src: 'images/DSCF4440.JPG', alt: 'Torres del Paine behind the clouds, Parque Nacional Torres del Paine, Chile. December 2023' },
     { src: 'images/DSCF3898.jpg', alt: 'Fishing town, Portree, Scotland. August 2023' },
+    { src: 'images/DSCF5189.JPG', alt: 'Foggy mountains, Chamonix, France. December 2024' },
     // ...add more photos as needed
 ];
 
@@ -36,6 +37,7 @@ photos.forEach((photo, index) => {
     img.src = photo.src;
     img.alt = photo.alt;
     img.classList.add('thumbnail');
+    img.loading = 'lazy'; // Add lazy loading attribute
     img.addEventListener('click', () => openLightbox(index));
 
     photoDiv.appendChild(img);
