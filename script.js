@@ -1,16 +1,55 @@
 // Image Data (Replace with your actual image paths and alt text)
 const photos = [
-    { src: 'images/image1.JPG', alt: 'Shark point, near Santa Cruz. California. May 2022' },
-    { src: 'images/DSCF3309.jpg', alt: 'Beautiful Vernal Falls with a rainbow. Yosemite National Park, California. August 2022' },
-    { src: 'images/DSCF3373.JPG', alt: 'Sunrise over the lake. Lake Tahoe, California. August 2022' },
-    { src: 'images/DSCF3409.jpg', alt: 'A sea of lakes from the top of Desolation Wilderness. Lake Tahoe, California. August 2022' },
-    { src: 'images/DSCF4027.jpg', alt: 'The greenest field I have ever witness. Fairy Glen, Isle of Skye, Scotland. August 2023' },
-    { src: 'images/DSCF4233.JPG', alt: 'Mountains over mountains in Parque Arenas. Cajón del Maipo, Chile. October 2023' },
-    { src: 'images/DSCF4187.jpg', alt: 'Where the mountains meet the water, Embalse el Yeso 2.600 m.a.s.l. Cajón del Maipo, Chile. October 2023' },
-    { src: 'images/IMG_2640.jpeg', alt: 'Views from the Veleta peak, 3.396 m.a.s.l. Sierra Nevada, Granada, Spain. February 2023' },
-    { src: 'images/DSCF4440.JPG', alt: 'Torres del Paine behind the clouds, Parque Nacional Torres del Paine, Chile. December 2023' },
-    { src: 'images/DSCF3898.jpg', alt: 'Fishing town, Portree, Scotland. August 2023' },
-    { src: 'images/DSCF5189.JPG', alt: 'Foggy mountains, Chamonix, France. December 2024' },
+    { 
+        src: 'images/optimized/image1.webp', 
+        thumb: 'images/thumbs/image1-thumb.jpg',
+        alt: 'Shark point, near Santa Cruz. California. May 2022' 
+    },
+    { 
+        src: 'images/optimized/DSCF3309.webp', 
+        thumb: 'images/thumbs/DSCF3309-thumb.jpg',
+        alt: 'Beautiful Vernal Falls with a rainbow. Yosemite National Park, California. August 2022' 
+    },
+    { 
+        src: 'images/optimized/DSCF3373.webp', 
+        thumb: 'images/thumbs/DSCF3373-thumb.jpg',
+        alt: 'Sunrise over the lake. Lake Tahoe, California. August 2022' 
+    },
+    { 
+        src: 'images/optimized/DSCF3409.webp', 
+        thumb: 'images/thumbs/DSCF3409-thumb.jpg',
+        alt: 'A sea of lakes from the top of Desolation Wilderness. Lake Tahoe, California. August 2022' 
+    },
+    { 
+        src: 'images/optimized/DSCF4027.webp', 
+        thumb: 'images/thumbs/DSCF4027-thumb.jpg',
+        alt: 'The greenest field I have ever witness. Fairy Glen, Isle of Skye, Scotland. August 2023' 
+    },
+    { 
+        src: 'images/optimized/DSCF4233.webp', 
+        thumb: 'images/thumbs/DSCF4233-thumb.jpg',
+        alt: 'Mountains over mountains in Parque Arenas. Cajón del Maipo, Chile. October 2023' 
+    },
+    { 
+        src: 'images/optimized/DSCF4187.webp', 
+        thumb: 'images/thumbs/DSCF4187-thumb.jpg',
+        alt: 'Where the mountains meet the water, Embalse el Yeso 2.600 m.a.s.l. Cajón del Maipo, Chile. October 2023' 
+    },
+    { 
+        src: 'images/optimized/DSCF4440.webp', 
+        thumb: 'images/thumbs/DSCF4440-thumb.jpg',
+        alt: 'Torres del Paine behind the clouds, Parque Nacional Torres del Paine, Chile. December 2023' 
+    },
+    { 
+        src: 'images/optimized/DSCF3898.webp', 
+        thumb: 'images/thumbs/DSCF3898-thumb.jpg',
+        alt: 'Fishing town, Portree, Scotland. August 2023' 
+    },
+    { 
+        src: 'images/optimized/DSCF5189.webp', 
+        thumb: 'images/thumbs/DSCF5189-thumb.jpg',
+        alt: 'Foggy mountains, Chamonix, France. December 2024' 
+    },
     // ...add more photos as needed
 ];
 
@@ -34,10 +73,11 @@ photos.forEach((photo, index) => {
     photoDiv.classList.add('photo');
 
     const img = document.createElement('img');
-    img.src = photo.src;
+    // Use the thumbnail source for the gallery view
+    img.src = photo.thumb; // <-- THIS IS THE KEY CHANGE
     img.alt = photo.alt;
     img.classList.add('thumbnail');
-    img.loading = 'lazy'; // Add lazy loading attribute
+    img.loading = 'lazy'; 
     img.addEventListener('click', () => openLightbox(index));
 
     photoDiv.appendChild(img);
