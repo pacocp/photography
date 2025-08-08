@@ -50,6 +50,11 @@ const photos = [
         thumb: 'images/thumbs/DSCF5189-thumb.jpg',
         alt: 'Foggy mountains, Chamonix, France. December 2024' 
     },
+    { 
+        src: 'images/optimized/DSCF5285.webp', 
+        thumb: 'images/thumbs/DSCF5285-thumb.jpg',
+        alt: 'Lake Bled, Slovenia. July 2025' 
+    },
     // ...add more photos as needed
 ];
 
